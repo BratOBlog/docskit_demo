@@ -42,4 +42,4 @@ jobs:
         run: |
           set -e
           npm -g install @platformos/pos-cli
-          pos-cli deploy
+          pos-cli deploy staging
