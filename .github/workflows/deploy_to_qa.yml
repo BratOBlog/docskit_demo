@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      MPKIT_URL: ${{ secrets.MPKIT_QA_URL }}
+      MPKIT_URL: https://docskit-sandbox.staging.oregon.platform-os.com/
       MPKIT_TOKEN: ${{ secrets.MPKIT_TOKEN }}
       CI: true
     steps:
