@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
+      MPKIT_EMAIL: ${{ secrets.MPKIT_EMAIL }}
       MPKIT_URL: https://docskit-sandbox.staging.oregon.platform-os.com/
       MPKIT_TOKEN: ${{ secrets.MPKIT_TOKEN }}
       CI: true
@@ -32,14 +33,23 @@ jobs:
           cd src
           npm install --legacy-peer-deps
 
-      - name: Build
+
+       - name: pos-cli
+        shell: sh
         run: |
-          cd src
+          npm install -g @platformos/pos-cli
+
+      - name: Build
+        shell: sh
+        run: |
+          set -eu
+          echo $MPKIT_URL
+          npm ci
           npm run build
 
       - name: Deploy
+        timeout-minutes: 10
         shell: sh
         run: |
-          set -e
-          npm -g install @platformos/pos-cli
+          set -eu
           pos-cli deploy
