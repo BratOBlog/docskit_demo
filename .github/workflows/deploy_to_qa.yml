@@ -33,8 +33,7 @@ jobs:
           cd src
           npm install --legacy-peer-deps
 
-
-       - name: pos-cli
+      - name: pos-cli
         shell: sh
         run: |
           npm install -g @platformos/pos-cli
