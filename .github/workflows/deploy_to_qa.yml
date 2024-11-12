@@ -17,6 +17,7 @@ jobs:
       MPKIT_TOKEN: ${{ secrets.MPKIT_TOKEN }}
       ASSET_PREFIX: ${{ vars.QA_ASSET_PREFIX }}
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      CI: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
