@@ -15,6 +15,7 @@ jobs:
       MPKIT_EMAIL: ${{ secrets.MPKIT_EMAIL }}
       MPKIT_URL: https://docskit-sandbox.staging.oregon.platform-os.com/
       MPKIT_TOKEN: ${{ secrets.MPKIT_TOKEN }}
+      ASSET_PREFIX: ${{ vars.PREVIEW_ASSET_PREFIX }}
       CI: true
     steps:
       - name: Checkout code
