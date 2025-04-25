@@ -2,7 +2,7 @@ name: Deploy to QA
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 10
     env:
       MPKIT_EMAIL: ${{ secrets.MPKIT_EMAIL }}
-      MPKIT_URL: https://docskit-sandbox.staging.oregon.platform-os.com/
+      MPKIT_URL: https://docskit-uni-course.staging.oregon.platform-os.com/
       MPKIT_TOKEN: ${{ secrets.MPKIT_TOKEN }}
       ASSET_PREFIX: ${{ vars.PREVIEW_ASSET_PREFIX }}
       CI: true
