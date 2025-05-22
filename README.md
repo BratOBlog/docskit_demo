@@ -20,6 +20,8 @@ npm install && npm install --prefix src
 
 You can change the existing sample pages or create new ones in the `src/docs` folder.
 
+Something update something new.
+
 ## Changing the theme and extending the built-in components
 
 You can update the default theme by providing your custom colors (in RGB format) in the theme configuration file: `src/src/@platformos/gatsby-theme-platformos-docskit/theme/colors.js`
